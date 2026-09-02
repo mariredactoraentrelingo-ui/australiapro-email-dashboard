@@ -24,19 +24,20 @@ body{font-family:'DM Sans',sans-serif;background:#f4f5f9;color:#1c2333;font-size
 .section-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#d8dcec,transparent);}
 .page{max-width:1240px;margin:0 auto;padding:6px 24px 44px;}
 
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;}
-.kcard{background:var(--white);border-radius:14px;padding:18px;border:1px solid var(--border);position:relative;overflow:hidden;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;}
+.kcard{background:var(--white);border-radius:14px;padding:16px;border:1px solid var(--border);position:relative;overflow:hidden;}
 .kcard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
 .kcard.k1::before{background:linear-gradient(90deg,#234283,#1a3268);}
 .kcard.k2::before{background:linear-gradient(90deg,#209ef5,#5fc0fb);}
 .kcard.k3::before{background:linear-gradient(90deg,#3ecf8e,#8de3b8);}
 .kcard.k4::before{background:linear-gradient(90deg,#EA580C,#f4915e);}
+.kcard.k5::before{background:linear-gradient(90deg,#7c5cff,#b39dff);}
 .klabel{font-size:10px;font-weight:700;color:#8b9ab3;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
-.kval{font-family:'Plus Jakarta Sans',sans-serif;font-size:29px;font-weight:800;line-height:1;}
-.k1 .kval{color:#234283;} .k2 .kval{color:#0d7fc9;} .k3 .kval{color:#22a46a;} .k4 .kval{color:#c1470b;}
+.kval{font-family:'Plus Jakarta Sans',sans-serif;font-size:27px;font-weight:800;line-height:1;}
+.k1 .kval{color:#234283;} .k2 .kval{color:#0d7fc9;} .k3 .kval{color:#22a46a;} .k4 .kval{color:#c1470b;} .k5 .kval{color:#5f42d6;}
 .ksub{font-size:11px;color:#a3aec2;margin-top:7px;}
 
-.charts-row{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;}
+.charts-row{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;}
 @media(max-width:980px){.charts-row{grid-template-columns:1fr;}}
 .charts-row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 @media(max-width:980px){.charts-row-2{grid-template-columns:1fr;}}
@@ -46,13 +47,16 @@ body{font-family:'DM Sans',sans-serif;background:#f4f5f9;color:#1c2333;font-size
 .cwrap{position:relative;}
 
 .insight-card{background:var(--cream2);border:1px solid #e2ded0;border-left:5px solid var(--cyan);border-radius:14px;padding:22px 24px;}
-.insight-card .tag{display:inline-block;background:var(--cyan);color:#052b4a;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-bottom:12px;}
+.insight-card .tag{display:inline-block;background:var(--cyan);color:#ffffff;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-bottom:12px;}
 .insight-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:800;color:var(--navy);margin-bottom:10px;}
 .insight-card p{font-size:13px;color:#455266;line-height:1.75;margin-bottom:10px;}
 .insight-card p:last-child{margin-bottom:0;}
 .insight-card strong{color:var(--navy);}
 .insight-card .big{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;color:#0d7fc9;}
-.insight-card .note{font-size:12px;color:#5c6a52;background:#ffffff;border-radius:8px;padding:11px 14px;border:1px solid #e2ded0;}
+.insight-card .note{font-size:12px;color:#5c6a52;background:#ffffff;border-radius:8px;padding:11px 14px;border:1px solid #e2ded0;margin-top:10px;}
+.insight-card ul{padding-left:20px;margin:8px 0;}
+.insight-card li{font-size:13px;color:#455266;line-height:1.7;margin-bottom:6px;}
+.insight-card li strong{color:var(--navy);}
 
 .table-card{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden;}
 .table-scroll{overflow-x:auto;}
@@ -62,7 +66,7 @@ thead th.hi{background:linear-gradient(135deg,#209ef5,#0d7fc9);}
 tbody tr:nth-child(even){background:#f9fafc;}
 tbody tr:hover{background:#eaf4fd;}
 tbody td{padding:11px 12px;text-align:left;color:var(--gray-text);border-bottom:1px solid #eef1f7;white-space:nowrap;vertical-align:middle;}
-tbody td.wrap{white-space:normal;line-height:1.45;max-width:230px;min-width:170px;}
+tbody td.wrap{white-space:normal;line-height:1.45;max-width:250px;min-width:170px;}
 tbody td.num{text-align:right;font-variant-numeric:tabular-nums;}
 tbody td.muted{color:#b7c0d1;}
 
@@ -71,6 +75,11 @@ tbody td.muted{color:#b7c0d1;}
 .p-noasistio{background:#fff0cd;color:#a06a00;}
 .p-consultoria{background:linear-gradient(135deg,#3ecf8e,#22a46a);color:#ffffff;}
 .p-completed{background:#d6f5e6;color:#17784f;}
+.p-cancelada{background:#fde3d9;color:#a1451b;}
+.wp-tag{display:inline-block;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;}
+.wp-cotiza{background:#e7ecfb;color:#3547a8;}
+.wp-migration{background:#dff2fd;color:#0d7fc9;}
+.wp-nuevo{background:#fdece0;color:#c1470b;}
 
 .note-card{background:var(--white);border-radius:14px;border:1px solid var(--border);border-left:5px solid var(--orange);padding:24px 26px;}
 .note-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:7px;}
@@ -79,6 +88,8 @@ tbody td.muted{color:#b7c0d1;}
 .note-card li{font-size:13px;color:#556277;line-height:1.75;margin-bottom:8px;}
 .note-card li::marker{color:var(--orange);}
 .note-card li strong{color:var(--navy);}
+.note-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:800;color:var(--navy);margin:20px 0 10px;text-transform:uppercase;letter-spacing:.5px;}
+.subject-tag{display:inline-block;background:linear-gradient(135deg,#e6f8fb,#f2fbfc);border:1px solid #b9e6ee;color:#076b7c;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;margin:0 6px 8px 0;}
 
 .footer-note{font-size:11px;color:#a3aec2;text-align:center;margin-top:32px;}
 @media(max-width:600px){.kpi-grid{grid-template-columns:1fr;}.page{padding:6px 14px 30px;}}
@@ -91,41 +102,49 @@ tbody td.muted{color:#b7c0d1;}
     <h1>Dashboard Agosto 2026 · AustraliaPRO</h1>
     <p>Broadcast de correo + Rayos X Migratorio (CRM) · Datos manuales</p>
   </div>
-  <span class="badge-cache">Corte 19 ago 2026</span>
+  <span class="badge-cache">Corte 31 ago 2026</span>
 </div>
 
 <div class="page">
   <div class="section-label">Resumen del mes</div>
   <div class="kpi-grid">
-    <div class="kcard k1"><div class="klabel">Correos enviados</div><div class="kval">5</div><div class="ksub">5.330 contactos por envío aprox.</div></div>
-    <div class="kcard k2"><div class="klabel">Open rate ponderado</div><div class="kval">20.3%</div><div class="ksub">Sobre 5 broadcasts</div></div>
-    <div class="kcard k1"><div class="klabel">Registros Rayos X</div><div class="kval">4</div><div class="ksub">1 no elegible, 1 no asistió, 2 ventas</div></div>
-    <div class="kcard k3"><div class="klabel">Consultorías vendidas</div><div class="kval">2</div><div class="ksub">Consultoría Estándar</div></div>
-    <div class="kcard k4"><div class="klabel">Ingreso del mes</div><div class="kval">$598</div><div class="ksub">AUD + GST · 2 × $299</div></div>
+    <div class="kcard k1"><div class="klabel">Correos enviados</div><div class="kval">8</div><div class="ksub">8.526 envíos acumulados</div></div>
+    <div class="kcard k2"><div class="klabel">Open rate ponderado</div><div class="kval">21.1%</div><div class="ksub">Sobre 8 broadcasts</div></div>
+    <div class="kcard k2"><div class="klabel">Click rate ponderado</div><div class="kval">1.87%</div><div class="ksub">CTR saludable en general</div></div>
+    <div class="kcard k1"><div class="klabel">Registros Rayos X</div><div class="kval">4</div><div class="ksub">1 no elegible, 1 no asistió</div></div>
+    <div class="kcard k3"><div class="klabel">Consultorías tomadas</div><div class="kval">2</div><div class="ksub">1 cancelada después</div></div>
+    <div class="kcard k4"><div class="klabel">Ganancias</div><div class="kval">$299</div><div class="ksub">AUD + GST · 1 de 2 con devolución</div></div>
+    <div class="kcard k5"><div class="klabel">Venta cruzada (halo)</div><div class="kval">$50.58</div><div class="ksub">Encuesta → Entrelingo</div></div>
   </div>
 
-  <div class="section-label">Lectura del mes</div>
+  <div class="section-label">Análisis del mes: UTM genérica y tres WordPress en tránsito</div>
   <div class="insight-card">
-    <span class="tag">Punto clave</span>
-    <h3>RAYOSX_agosto_2 y _3 traen mejor click rate, pero el cierre viene del embudo completo de la llamada</h3>
-    <p>Los tres envíos de la serie <strong>RAYOSX</strong> tienen click rate muy superior a los envíos generales (2.49% y 2.39% frente a 0.44% y 0.28%), lo que confirma que el asunto y el enfoque de esa serie generan más intención de agendar la llamada exploratoria.</p>
-    <p>De los <span class="big">4 registros</span> que llegaron al pipeline Rayos X Migratorio en agosto, <strong>1 no calificó</strong> (Daniel Alarcón), <strong>1 agendó y no asistió</strong> (Hasmuddin Djamal) y <strong>2 avanzaron a Consultoría Estándar</strong> (Habiba Salem y Carlota Lameiro Vigo), cada una por AUD $299 + GST.</p>
+    <span class="tag">Limitación principal</span>
+    <h3>Todavía usamos una sola UTM para todos los correos de agosto</h3>
+    <p>Los 4 registros que llegaron al pipeline Rayos X Migratorio en agosto comparten la misma UTM genérica (<strong>email / organic / news / australiapro / rayosx</strong>). Esto significa que <strong>no podemos saber qué correo específico convierte más que otro</strong>: sabemos que el canal email trae resultados, pero no cuál de los 8 asuntos, temas o WordPress usados fue el que efectivamente originó cada agendamiento.</p>
+    <p><strong>Plan para septiembre:</strong> se va a implementar una UTM personalizada por correo (utm_campaign único por envío), igual que ya se hizo en SkillsPRO desde agosto. Con eso, desde septiembre sí vamos a poder comparar el rendimiento real de cada correo y decidir con datos qué temas y asuntos generan más agendamientos.</p>
     <div class="note">
-      <strong>Con qué cautela leerlo:</strong> todos los negocios del CRM llegan con la misma UTM genérica (<code>email / organic / news / australiapro / rayosx</code>), no una UTM por correo individual. No podemos todavía atribuir qué broadcast específico originó cada uno de los 4 registros; solo sabemos que vinieron del canal email/newsletter en general. Para resolver esto hace falta UTM específica por envío, igual que ya se implementó en el dashboard de SkillsPRO.
+      <strong>Rastro técnico del mes:</strong> agosto se envió desde tres infraestructuras distintas mientras se resolvía la migración de email marketing.
+      <ul style="margin-top:8px">
+        <li><span class="wp-tag wp-cotiza">WordPress cotiza entrelingo</span> — 2 correos (1 y 2 de agosto)</li>
+        <li><span class="wp-tag wp-migration">WordPress go.migration-australiapro.com</span> — 3 correos (RAYOSX 3, 4 y 5)</li>
+        <li><span class="wp-tag wp-nuevo">WordPress nuevo exclusivo AustraliaPRO (australiapro.entrelingo.com)</span> — 3 correos (RAYOSX 6, 7 y 8)</li>
+      </ul>
+      <p style="margin-top:8px;margin-bottom:0">El objetivo es que en septiembre el envío masivo se haga por <strong>Bitrix (Plan A)</strong>, quedando <strong>australiapro.entrelingo.com</strong> como <strong>Plan B de respaldo</strong>. Este WordPress nuevo es el que se mantiene hacia adelante; los otros dos fueron soluciones temporales durante la transición.</p>
     </div>
   </div>
 
-  <div class="section-label">Rendimiento de los correos enviados</div>
+  <div class="section-label">Rendimiento de los 8 correos enviados</div>
   <div class="charts-row">
     <div class="ccard">
       <div class="ctitle">Open rate por correo</div>
-      <div class="csub">5 broadcasts de agosto</div>
-      <div class="cwrap" style="height:275px"><canvas id="cOpen"></canvas></div>
+      <div class="csub">Color según el WordPress usado</div>
+      <div class="cwrap" style="height:290px"><canvas id="cOpen"></canvas></div>
     </div>
     <div class="ccard">
       <div class="ctitle">Click rate por correo</div>
-      <div class="csub">La serie RAYOSX destaca sobre el resto</div>
-      <div class="cwrap" style="height:275px"><canvas id="cClick"></canvas></div>
+      <div class="csub">La serie RAYOSX se mantiene por encima de 1.4% todo el mes</div>
+      <div class="cwrap" style="height:290px"><canvas id="cClick"></canvas></div>
     </div>
   </div>
 
@@ -133,12 +152,12 @@ tbody td.muted{color:#b7c0d1;}
   <div class="charts-row-2">
     <div class="ccard">
       <div class="ctitle">De agendamiento a venta</div>
-      <div class="csub">4 registros del mes</div>
+      <div class="csub">4 registros del mes · 1 venta cancelada después</div>
       <div class="cwrap" style="height:260px"><canvas id="cFunnel"></canvas></div>
     </div>
     <div class="ccard">
       <div class="ctitle">Estado actual de los 4 registros</div>
-      <div class="csub">Etapa del pipeline al corte</div>
+      <div class="csub">Etapa del pipeline al corte de agosto</div>
       <div class="cwrap" style="height:260px"><canvas id="cEstado"></canvas></div>
     </div>
   </div>
@@ -148,47 +167,71 @@ tbody td.muted{color:#b7c0d1;}
     <thead><tr id="theadBroadcast"></tr></thead>
     <tbody id="tbodyBroadcast"></tbody>
   </table></div></div>
-  <div class="note-card" style="margin-top:14px;border-left-color:var(--cyan)">
-    <div class="note-title">Asuntos pendientes</div>
-    <div class="note-intro" style="margin-bottom:0">Falta incorporar el asunto de cada correo en la tabla de broadcast. Queda como pendiente para completar en cuanto se confirmen.</div>
-  </div>
 
   <div class="section-label">Detalle Rayos X Migratorio · CRM</div>
   <div class="table-card"><div class="table-scroll"><table>
     <thead><tr id="theadCrm"></tr></thead>
     <tbody id="tbodyCrm"></tbody>
   </table></div></div>
-
-  <div class="section-label">Problemáticas a resolver</div>
-  <div class="note-card">
-    <div class="note-title">Limitaciones actuales de medición</div>
-    <div class="note-intro">El panel se limita a lo que hoy podemos registrar de forma confiable entre el broadcast de correo y el CRM de Rayos X Migratorio.</div>
-    <ul>
-      <li><strong>No hay UTM específica por correo en el CRM.</strong> Los 4 registros de agosto comparten la misma UTM genérica (<code>australiapro / rayosx</code>), así que no podemos atribuir cada agendamiento a un broadcast puntual.</li>
-      <li><strong>El asunto de cada correo todavía no está cargado</strong> en la tabla de broadcast.</li>
-      <li><strong>Órdenes y revenue del broadcast salen vacíos.</strong> El ingreso de las 2 ventas ($598 AUD + GST) se registra en el CRM, pero no está conectado automáticamente con el correo que las originó.</li>
-      <li><strong>Muestra pequeña.</strong> Con solo 4 registros en el mes, las lecturas de conversión (2 de 4 en total, 2 de 3 entre los elegibles) todavía tienen bajo volumen para sacar conclusiones firmes sobre qué mensaje convierte mejor.</li>
-    </ul>
+  <div class="insight-card" style="margin-top:14px">
+    <p style="margin-bottom:0"><strong>Actualización posterior al cierre:</strong> de las 2 consultorías tomadas en agosto, <strong>1 fue cancelada después</strong> por la clienta. El ingreso neto real de agosto queda en <strong>$299 AUD + GST</strong>, no los $598 AUD + GST originalmente agendados.</p>
   </div>
 
-  <p class="footer-note">Dashboard AustraliaPRO by Entrelingo · Agosto 2026 en curso · Datos de broadcast de correo y CRM Rayos X Migratorio</p>
+  <div class="section-label">Recomendaciones y próximos pasos</div>
+  <div class="note-card">
+    <div class="note-title">Qué hacer con esto en septiembre</div>
+    <div class="note-intro">Estas son las líneas de acción que salen de los datos de agosto.</div>
+    <ul>
+      <li><strong>Ruta de suscripción a la newsletter.</strong> Se recomienda hacer seguimiento con Sergio sobre por dónde están entrando las personas que se suscriben, e implementar las mejoras ya sugeridas al pop up y a los formularios de Wix, para que sean más atractivos e inciten el clic a la suscripción.</li>
+      <li><strong>Atraer audiencia nueva es urgente.</strong> El open rate se mantiene bajo (entre 17.75% y 24.76%) a pesar de probar distintos tipos de correo, lo que indica bajo interés general de la base actual. Se van a seguir probando nuevas temáticas para identificar qué quiere leer realmente esta audiencia.</li>
+      <li><strong>El CTR es saludable, pero la conversión de clic a lead sigue baja.</strong> Con el nuevo servicio Rayos X vale la pena investigar con el equipo por qué, de quienes hacen clic, tan pocos terminan convirtiendo (de 4 registros, 2 tomaron consultoría y 1 se canceló después). Una hipótesis: la página de destino anterior era solo un formulario, mientras que la nueva página implementada a fines de agosto cuida más la experiencia del usuario. Vale la pena comparar el desempeño con la nueva página durante este mes.</li>
+      <li><strong>Cerrar la migración de infraestructura de correo.</strong> Septiembre es el mes para consolidar Bitrix como envío masivo principal y dejar el WordPress nuevo de AustraliaPRO como respaldo, evitando seguir fragmentando la medición entre distintas plataformas.</li>
+      <li><strong>UTM personalizada por correo.</strong> Prioridad técnica para septiembre: sin esto seguimos sin poder decir qué correo convierte mejor, más allá del canal general.</li>
+    </ul>
+
+    <div class="note-sub">Temas a probar en septiembre</div>
+    <ul>
+      <li><strong>Cambios de cupos migratorios 2026-27</strong> y qué implican para quien ya está en Australia con visa temporal.</li>
+      <li><strong>Mitos comunes</strong> sobre rechazos de visa y qué hacer si ya tuviste uno (conecta con la reformulación "Rechazo → Oportunidad de apelación bien gestionada").</li>
+      <li><strong>Comparativa entre visas</strong> para un mismo perfil (por ejemplo, Skilled Visa vs Sponsorship para alguien con empleador interesado).</li>
+      <li><strong>Historias de decisión</strong> contadas en primera persona: qué preguntó, qué dudó, qué decidió alguien en una situación similar a la del lector (sin prometer resultados).</li>
+      <li><strong>Preguntas frecuentes sobre Home Affairs</strong> respondidas de forma directa, aprovechando la experiencia de Emily Surina como exfuncionaria de Home Affairs.</li>
+      <li><strong>Fechas y plazos reales</strong> que afectan la decisión: vencimientos de visa, rondas trimestrales de la reforma de mayo 2026.</li>
+    </ul>
+
+    <div class="note-sub">Estilos de asunto a probar</div>
+    <div>
+      <span class="subject-tag">Pregunta directa: "¿Ya sabes qué pasa si tu visa vence?"</span>
+      <span class="subject-tag">Curiosidad: "El dato que casi nadie revisa antes de aplicar"</span>
+      <span class="subject-tag">Utilidad tipo checklist: "Lo que necesitas antes de tu cita en Home Affairs"</span>
+      <span class="subject-tag">Urgencia real con fecha oficial: "Esto cambia desde julio 2027"</span>
+      <span class="subject-tag">Autoridad: "Lo que ve un exfuncionario de Home Affairs en un rechazo"</span>
+    </div>
+  </div>
+
+  <p class="footer-note">Dashboard AustraliaPRO by Entrelingo · Agosto 2026 · Datos de broadcast de correo y CRM Rayos X Migratorio</p>
 </div>
 
 <script>
 /* ---------- BROADCAST ---------- */
-const BROADCAST_COLS=['Nombre','Creado','Enviado','Contactos','Enviados','Open rate','Click rate','Órdenes','Revenue','Estado'];
+const BROADCAST_COLS=['Nombre','Asunto','WordPress','Creado','Enviado','Contactos','Enviados','Open rate','Click rate','Órdenes','Revenue','Estado'];
 const BROADCAST=[
-  {name:'AustraliaPRO_agosto_1',created:'6 ago 2026 10:12 am',exec:'7 ago 2026 7:58 am',contacts:'1.072',sent:'1.072',open:'24.06%',click:'0.44%',orders:'–',revenue:'–',status:'Completed'},
-  {name:'AustraliaPRO_agosto_encuesta',created:'10 ago 2026 11:55 am',exec:'10 ago 2026 12:31 pm',contacts:'1.045',sent:'1.044',open:'23.05%',click:'0.28%',orders:'–',revenue:'–',status:'Completed'},
-  {name:'AustraliaPRO_RAYOSX_agosto_2',created:'13 ago 2026 8:46 am',exec:'13 ago 2026 9:10 am',contacts:'1.072',sent:'1.072',open:'20.53%',click:'2.39%',orders:'–',revenue:'–',status:'Completed'},
-  {name:'AustraliaPRO_RAYOSX_agosto_3',created:'13 ago 2026 9:13 am',exec:'14 ago 2026 9:30 am',contacts:'1.072',sent:'1.072',open:'18.59%',click:'1.47%',orders:'–',revenue:'–',status:'Completed'},
-  {name:'AustraliaPRO_RAYOSX_agosto_4',created:'18 ago 2026 12:28 pm',exec:'18 ago 2026 12:40 pm',contacts:'1.069',sent:'1.069',open:'15.88%',click:'2.49%',orders:'–',revenue:'–',status:'Completed'}
+  {name:'AustraliaPRO_agosto_1',subject:'3 Cosas que pocos... revisan con tiempo! (Que no te pase a ti)',wp:'cotiza',wpLabel:'Cotiza Entrelingo',created:'6 ago 10:12 am',exec:'7 ago 07:58 am',contacts:'1.072',sent:'1.072',open:'24.76%',click:'0.44%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_agosto2_encuesta',subject:'¿Cómo funciona la cosa del trabajo en Australia?',wp:'cotiza',wpLabel:'Cotiza Entrelingo',created:'10 ago 11:55 am',exec:'10 ago 12:31 pm',contacts:'1.045',sent:'1.044',open:'23.97%',click:'0.28%',orders:'1',revenue:'$50.58*',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_3',subject:'Los pasaportes que SÍ te abren puertas en Australia!',wp:'migration',wpLabel:'go.migration-australiapro.com',created:'13 ago 8:46 am',exec:'13 ago 9:10 am',contacts:'1.072',sent:'1.072',open:'21.64%',click:'2.39%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_4',subject:'Checklist de documentos para tu Visa Australiana',wp:'migration',wpLabel:'go.migration-australiapro.com',created:'13 ago 9:13 am',exec:'14 ago 9:30 am',contacts:'1.072',sent:'1.072',open:'20.05%',click:'1.47%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_5',subject:'Nadie cree el dato #3 de este correo',wp:'migration',wpLabel:'go.migration-australiapro.com',created:'18 ago 12:28 pm',exec:'18 ago 12:40 pm',contacts:'1.069',sent:'1.069',open:'19.85%',click:'2.59%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_6',subject:'¿Por qué todo el mundo quiere trabajar aquí?',wp:'nuevo',wpLabel:'WordPress nuevo AustraliaPRO',created:'20 ago 11:43 pm',exec:'21 ago 1:07 am',contacts:'1.067',sent:'1.067',open:'20.00%',click:'2.52%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_7',subject:'Esto es lo malo de Home Affairs',wp:'nuevo',wpLabel:'WordPress nuevo AustraliaPRO',created:'26 ago 4:12 am',exec:'26 ago 4:21 am',contacts:'1.066',sent:'1.066',open:'20.78%',click:'2.78%',orders:'–',revenue:'–',status:'Completed'},
+  {name:'AustraliaPRO_RAYOSX_agosto_8',subject:'¿Llegó el momento de irse?',wp:'nuevo',wpLabel:'WordPress nuevo AustraliaPRO',created:'31 ago 9:29 am',exec:'31 ago 9:35 am',contacts:'1.064',sent:'1.064',open:'17.75%',click:'2.44%',orders:'–',revenue:'–',status:'Completed'}
 ];
-document.getElementById('theadBroadcast').innerHTML=BROADCAST_COLS.map(c=>'<th>'+c+'</th>').join('');
+document.getElementById('theadBroadcast').innerHTML=BROADCAST_COLS.map((c,i)=>i===7||i===8?'<th class="hi">'+c+'</th>':'<th>'+c+'</th>').join('');
 document.getElementById('tbodyBroadcast').innerHTML=BROADCAST.map(b=>{
-  const est='<span class="pill p-completed">Completed</span>';
+  const wpCls=b.wp==='cotiza'?'wp-cotiza':(b.wp==='migration'?'wp-migration':'wp-nuevo');
   return '<tr>'+
     '<td class="wrap"><strong style="color:#234283">'+b.name+'</strong></td>'+
+    '<td class="wrap">'+b.subject+'</td>'+
+    '<td><span class="wp-tag '+wpCls+'">'+b.wpLabel+'</span></td>'+
     '<td>'+b.created+'</td>'+
     '<td>'+b.exec+'</td>'+
     '<td class="num">'+b.contacts+'</td>'+
@@ -197,9 +240,9 @@ document.getElementById('tbodyBroadcast').innerHTML=BROADCAST.map(b=>{
     '<td class="num">'+b.click+'</td>'+
     '<td class="num muted">'+b.orders+'</td>'+
     '<td class="num muted">'+b.revenue+'</td>'+
-    '<td>'+est+'</td>'+
+    '<td><span class="pill p-completed">Completed</span></td>'+
   '</tr>';
-}).join('');
+}).join('')+'<tr><td colspan="12" style="font-size:11px;color:#a3aec2;padding:8px 12px">*Venta atribuida a efecto halo: el clic vino del correo de AustraliaPRO pero la venta se registró como producto general de Entrelingo.</td></tr>';
 
 /* ---------- CRM RAYOS X ---------- */
 const CRM_COLS=['Nombre','Contacto','Etapa','Etapa anterior','Responsable','Área profesional','Fecha creación','Fecha sesión','Canal Clientify','Ingreso'];
@@ -228,25 +271,27 @@ document.getElementById('tbodyCrm').innerHTML=CRM.map(r=>{
 /* ---------- CHARTS ---------- */
 Chart.register(ChartDataLabels);
 const CFG={responsive:true,maintainAspectRatio:false};
-const NAMES=BROADCAST.map(b=>b.name.replace('AustraliaPRO_','').replace('_agosto',''));
+const NAMES=BROADCAST.map(b=>b.name.replace('AustraliaPRO_','').replace('agosto_','ago_').replace('agosto2_','ago2_'));
+const WP_COLORS={cotiza:'#3547a8',migration:'#0d7fc9',nuevo:'#c1470b'};
+const barColors=BROADCAST.map(b=>WP_COLORS[b.wp]);
 
 new Chart(document.getElementById('cOpen'),{type:'bar',
-  data:{labels:NAMES,datasets:[{data:BROADCAST.map(b=>parseFloat(b.open)),backgroundColor:'#234283',borderRadius:8}]},
-  options:{...CFG,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#234283',font:{size:12,weight:'bold'},formatter:v=>v+'%'}},
-    scales:{x:{ticks:{font:{size:9,weight:'bold'},color:'#7686a1'},grid:{display:false}},y:{beginAtZero:true,ticks:{color:'#a3aec2'},grid:{color:'#eef1f7'},afterDataLimits(s){s.max=s.max+4;}}}}});
+  data:{labels:NAMES,datasets:[{data:BROADCAST.map(b=>parseFloat(b.open)),backgroundColor:barColors,borderRadius:8}]},
+  options:{...CFG,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#234283',font:{size:11,weight:'bold'},formatter:v=>v+'%'}},
+    scales:{x:{ticks:{font:{size:8,weight:'bold'},color:'#7686a1',maxRotation:35,minRotation:35},grid:{display:false}},y:{beginAtZero:true,ticks:{color:'#a3aec2'},grid:{color:'#eef1f7'},afterDataLimits(s){s.max=s.max+4;}}}}});
 
 new Chart(document.getElementById('cClick'),{type:'bar',
-  data:{labels:NAMES,datasets:[{data:BROADCAST.map(b=>parseFloat(b.click)),backgroundColor:BROADCAST.map(b=>b.name.includes('RAYOSX')?'#209ef5':'#c7d1e6'),borderRadius:8}]},
-  options:{...CFG,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#0d7fc9',font:{size:12,weight:'bold'},formatter:v=>v+'%'}},
-    scales:{x:{ticks:{font:{size:9,weight:'bold'},color:'#7686a1'},grid:{display:false}},y:{beginAtZero:true,ticks:{color:'#a3aec2'},grid:{color:'#eef1f7'},afterDataLimits(s){s.max=s.max+0.5;}}}}});
+  data:{labels:NAMES,datasets:[{data:BROADCAST.map(b=>parseFloat(b.click)),backgroundColor:barColors,borderRadius:8}]},
+  options:{...CFG,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#0d7fc9',font:{size:11,weight:'bold'},formatter:v=>v+'%'}},
+    scales:{x:{ticks:{font:{size:8,weight:'bold'},color:'#7686a1',maxRotation:35,minRotation:35},grid:{display:false}},y:{beginAtZero:true,ticks:{color:'#a3aec2'},grid:{color:'#eef1f7'},afterDataLimits(s){s.max=s.max+0.5;}}}}});
 
 new Chart(document.getElementById('cFunnel'),{type:'bar',
-  data:{labels:['Agendaron','Elegibles','Asistieron','Ventas'],datasets:[{data:[4,3,2,2],backgroundColor:['#234283','#209ef5','#5fc0fb','#3ecf8e'],borderRadius:8}]},
+  data:{labels:['Agendaron','Elegibles','Asistieron','Ventas vigentes'],datasets:[{data:[4,3,2,1],backgroundColor:['#234283','#209ef5','#5fc0fb','#3ecf8e'],borderRadius:8}]},
   options:{...CFG,indexAxis:'y',plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:'#234283',font:{size:12,weight:'bold'},formatter:(v,c)=>c.dataIndex===0?v:v+'  ('+(v/4*100).toFixed(0)+'%)'}},
     scales:{x:{beginAtZero:true,ticks:{stepSize:1,color:'#a3aec2'},grid:{color:'#eef1f7'},afterDataLimits(s){s.max=s.max+1;}},y:{ticks:{font:{size:11,weight:'bold'},color:'#556277'},grid:{display:false}}}}});
 
 new Chart(document.getElementById('cEstado'),{type:'doughnut',
-  data:{labels:['No elegible','No se presentó','Consultoría migratoria (venta)'],datasets:[{data:[1,1,2],backgroundColor:['#f4915e','#ffb020','#3ecf8e'],borderWidth:3,borderColor:'#fff'}]},
+  data:{labels:['No elegible','No se presentó','Consultoría vigente','Consultoría cancelada'],datasets:[{data:[1,1,1,1],backgroundColor:['#f4915e','#ffb020','#3ecf8e','#e05a3f'],borderWidth:3,borderColor:'#fff'}]},
   options:{...CFG,cutout:'55%',plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:12,padding:10,color:'#556277',usePointStyle:true,pointStyle:'circle'}},datalabels:{color:'#fff',font:{size:14,weight:'bold'},formatter:v=>v||''}}}});
 </script>
 </body>
